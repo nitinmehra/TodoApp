@@ -1,5 +1,5 @@
 #MyObtainTokenPairView
-from auth_app.serializers import MyTokenObtainPairSerializer,RegisterSerializer
+from auth_app.serializers import MyTokenObtainPairSerializer,UserRegisterSerializer
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework_simplejwt.views import TokenObtainPairView
 #RegisterView
@@ -19,7 +19,7 @@ class MyObtainTokenPairView(TokenObtainPairView):
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     permission_classes = (AllowAny,)
-    serializer_class = RegisterSerializer
+    serializer_class = UserRegisterSerializer
 
 class LogoutView(APIView):
     permission_classes = (IsAuthenticated,)
