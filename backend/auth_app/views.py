@@ -3,7 +3,7 @@ from auth_app.serializers import MyTokenObtainPairSerializer,UserRegisterSeriali
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework_simplejwt.views import TokenObtainPairView
 #RegisterView
-from django.contrib.auth.models import User
+from auth_app.models import User
 from rest_framework import generics
 #LogoutView
 from rest_framework.views import APIView
